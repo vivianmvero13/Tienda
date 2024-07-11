@@ -11,8 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Controller
 @Slf4j
 @RequestMapping("/categoria")
-
 public class CategoriaController {
+    
     @Autowired
     private CategoriaService categoriaService;
     
