@@ -49,4 +49,16 @@ public class CategoriaController {
         categoriaService.save(categoria);
         return "redirect:/categoria/listado";
     }
+    @GetMapping("/eliminar/{idCategoria}")
+    public String categoriaEliminar(Categoria categoria) {
+        categoriaService.delete(categoria);
+        return "redirect:/categoria/listado";
+    }
+
+    @GetMapping("/modificar/{idCategoria}")
+    public String categoriaModificar(Categoria categoria, Model model) {
+        categoria = categoriaService.getCategoria(categoria);
+        model.addAttribute("categoria", categoria);
+        return "/categoria/modifica";
+    }   
 }
