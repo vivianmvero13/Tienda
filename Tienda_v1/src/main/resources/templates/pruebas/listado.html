@@ -6,7 +6,10 @@
     </head>
     <body>
         <header th:replace="~{layout/plantilla :: header}"/>
-        <section th:replace="~{producto/fragmentos :: editarProducto}"/>
+
+        <section th:replace="~{pruebas/fragmentos :: categoriasTabs}"/><!-- Menu  de las categorias -->
+        <section th:replace="~{pruebas/fragmentos :: listadoProductos}"/> <!-- Tabla de productos -->
+
         <footer th:replace="~{layout/plantilla :: footer}"/>      
       
     </body>
