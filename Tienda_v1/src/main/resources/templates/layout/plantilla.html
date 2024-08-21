@@ -22,6 +22,7 @@
                         <ul class="navbar-nav" sec:authorize='hasRole("ROLE_VENDEDOR")'>                             
                             <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/categoria/listado}">[[#{plantilla.categorias}]]</a></li>                             
                             <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/producto/listado}">[[#{plantilla.productos}]]</a></li>    
+                            <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/carrito/listado}">[[#{plantilla.carrito}]]</a></li>  
 
                             <li class="nav-item dropdown" sec:authorize='hasRole("ROLE_ADMIN")'>
                                 <a class="nav-link dropdown-toggle" 
@@ -34,7 +35,7 @@
                                     <li><a class="dropdown-item" th:href="@{/pruebas/listado2}">[[#{plantilla.consultas}]]</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item px-2" sec:authorize='hasRole("ROLE_ADMIN")'><a class="nav-menu-link nav-link" th:href="@{/usuario/listado}">[[#{plantilla.usuarios}]]</a></li>                         
+                            <li class="nav-item px-2" sec:authorize='hasRole("ROLE_ADMIN")'><a class="nav-menu-link nav-link" th:href="@{/usuario/listado}">[[#{plantilla.usuarios}]]</a></li>                          
                         </ul>                         
                         <div class="col-md-3">                             
                             <ul class="navbar-nav">                                                                 
